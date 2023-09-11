@@ -1,4 +1,4 @@
-import Task from "@/Components/Task";
+import Task from "@/components/Task";
 
 export default function Home() {
   return (

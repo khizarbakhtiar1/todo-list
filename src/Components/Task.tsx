@@ -30,8 +30,8 @@ const Task = () => {
         {mainTask.map((t, i) => (
           <li key={i} className="flex justify-between mb-6">
             <div className="w-2/3">
-              <h5 className="text-2xl font-bold">{t.task}</h5>
-              <p className="text-lg font-medium">{t.description}</p>
+              <h5 className="text-3xl font-bold">{t.task}</h5>
+              <p className="text-md font-medium">{t.description}</p>
             </div>
             <button
               onClick={() => {
@@ -39,7 +39,7 @@ const Task = () => {
               }}
               className="px-4 bg-red-500 text-white font-bold rounded h-10"
             >
-              Delete
+              X
             </button>
           </li>
         ))}
@@ -57,7 +57,7 @@ const Task = () => {
         <input
           type="text"
           placeholder="Enter New Task"
-          className="px-2 py-2 m-3 border-zinc-800 border-4 text-xl"
+          className="px-2 py-2 m-3 border-zinc-800 border-4 text-xl rounded-lg"
           value={task}
           onChange={(e) => {
             setTask(e.target.value);
@@ -66,7 +66,7 @@ const Task = () => {
         <input
           type="text"
           placeholder="Description"
-          className="px-2 py-2 m-3 border-zinc-800 border-4 text-xl"
+          className="px-2 py-2 m-3 border-zinc-800 border-4 text-xl rounded-lg"
           value={description}
           onChange={(e) => {
             setDescription(e.target.value);
